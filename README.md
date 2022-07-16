@@ -153,53 +153,6 @@ $ python --version
 Python 2.7.16
 ````
 
-How you can do with pipenv
-
-````
-Usage Examples:
-   Create a new project using Python 3.7, specifically:
-   $ pipenv --python 3.7
-
-   Remove project virtualenv (inferred from current directory):
-   $ pipenv --rm
-
-   Install all dependencies for a project (including dev):
-   $ pipenv install --dev
-
-   Create a lockfile containing pre-releases:
-   $ pipenv lock --pre
-
-   Show a graph of your installed dependencies:
-   $ pipenv graph
-
-   Check your installed dependencies for security vulnerabilities:
-   $ pipenv check
-
-   Install a local setup.py into your virtual environment/Pipfile:
-   $ pipenv install -e .
-
-   Use a lower-level pip command:
-   $ pipenv run pip freeze
-
-Commands:
-  check         Checks for PyUp Safety security vulnerabilities and against
-                PEP 508 markers provided in Pipfile.
-  clean         Uninstalls all packages not specified in Pipfile.lock.
-  graph         Displays currently-installed dependency graph information.
-  install       Installs provided packages and adds them to Pipfile, or (if no
-                packages are given), installs all packages from Pipfile.
-  lock          Generates Pipfile.lock.
-  open          View a given module in your editor.
-  requirements  Generate a requirements.txt from Pipfile.lock.
-  run           Spawns a command installed into the virtualenv.
-  scripts       Lists scripts in current environment config.
-  shell         Spawns a shell within the virtualenv.
-  sync          Installs all packages specified in Pipfile.lock.
-  uninstall     Uninstalls a provided package and removes it from Pipfile.
-  update        Runs lock, then sync.
-  verify        Verify the hash in Pipfile.lock is up-to-date.
-````
-
 Run your python
 
 ````sh
@@ -208,6 +161,10 @@ $ pipenv shell
 Launching subshell in virtual environment...
  . /Users/chenhanting/.local/share/virtualenvs/pyjie-internet-k9c1cwxU/bin/activate
 ````
+
+Result
+
+![](https://tva1.sinaimg.cn/large/e6c9d24egy1h49567tkwoj21d8078gnd.jpg)
 
 ### Production
 
