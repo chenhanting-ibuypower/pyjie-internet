@@ -1,106 +1,60 @@
 # Surveyed Topic
 
-### socket.keep-alive
+### socket & keep-alive
 
-(1) What is Socket?
+- What is Socket? [Link](https://www.796t.com/content/1541960708.html)
+- What does Web Socket works? [Link](https://ithelp.ithome.com.tw/articles/10161110)
+- The difference between socket and Keep-Alive?
+- TCP / IP [Link](https://www.youtube.com/watch?v=gxoIrBFfpDU) 
 
-(2)[TCP連線、Socket連線、Http連線的區別?](https://www.796t.com/content/1541960708.html)
+### Http Request Congestion
 
-https://www.796t.com/content/1541960708.html
+- What is http request congestion?
 
-(3) Web Socket如何運作？
+  Network congestion in data networking and queueing theory is the reduced quality of service that occurs when a network node or link is carrying more data than it can handle. Typical effects include queueing delay, packet loss or the blocking of new connections. A consequence of congestion is that an incremental increase in offered load leads either only to a small increase or even a decrease in network throughput.
 
-https://ithelp.ithome.com.tw/articles/10161110
+- The solution of HTTP request congestion? [LInk](https://blog.csdn.net/rth362147773/article/details/78453131)
 
-(4)socket和Keep-Alive的區別?
+### worker (gunicorn)
 
- 
+- The variations of performance between the numbers of workers. [Link1](https://zhuanlan.zhihu.com/p/371115835)、[Link2](https://hbnnforever.cn/article/gunicornworkers.html)
+- Implementation
 
-補充:
+### Post Form
 
-(1) 網路七層與TCP/IP
-
-https://www.youtube.com/watch?v=gxoIrBFfpDU
-
- 
-
-### HTTP阻塞
-
-(1)什麼是HTTP請求阻塞?
-
-(2)HTTP請求阻塞解決方法?
-
-https://blog.csdn.net/rth362147773/article/details/78453131
-
- 
-
-### worker工作者 (gunicorn)
-
-(1) workers 的數量與性能的變化
-
-https://zhuanlan.zhihu.com/p/371115835
-
-https://hbnnforever.cn/article/gunicornworkers.html
-
-(2)實作worker數量變化
-
- 
-
-### post表單
-
-(1)簡易傳送資料的POST實例
-
-https://clay-atlas.com/blog/2020/02/25/python-flask-chinese-note-html-request-get-post/
-
-https://ost.51cto.com/posts/3249
-
- 
-
- 
+- A simple demo of transmit data via POST. [Link1](https://clay-atlas.com/blog/2020/02/25/python-flask-chinese-note-html-request-get-post/)、[Link2](https://ost.51cto.com/posts/3249)![](https://tva1.sinaimg.cn/large/e6c9d24egy1h49567tkwoj21d8078gnd.jpg)
 
 ### gil x 線程安全 x 原子操作
 
-- 什麼是線程安全?怎樣不安全?
+- 什麼是線程安全? 怎樣不安全? [link](https://zhuanlan.zhihu.com/p/42719755)
 
-https://zhuanlan.zhihu.com/p/42719755
+- 什麼是原子操作?  [link](https://juejin.cn/post/6844904159120998408)
 
-- 什麼是原子操作?
+- 為什麼會有GIL? [Link1](https://www.796t.com/content/1545526461.html)、[Link2](https://realpython.com/python-gil/)
 
-https://juejin.cn/post/6844904159120998408
-
-- 為什麼會有GIL?
-
-https://www.796t.com/content/1545526461.html
-
-https://realpython.com/python-gil/
-
-- Python 的 GIL 能保證執行緒安全嗎？
-
-https://www.zhihu.com/question/521650365
+- Python 的 GIL 能保證執行緒安全嗎？[LInk](https://www.zhihu.com/question/521650365)
 
 - Python GIL 對執行緒併發性能的影響?
 
-- Python GIL適用的時機? 有gil和沒有gil的差別?
-
-https://pythonmana.com/2022/148/202205280819525678.html
+- Python GIL適用的時機? 有gil和沒有gil的差別? [Link](https://pythonmana.com/2022/148/202205280819525678.html)
 
 ### gevent檔案操作 x IO阻塞 x 判斷切換 x gevent.sleep()
 
-- 什麼情況造成IO阻塞? ➡️ [連結](https://kknews.cc/zh-tw/code/y569jna.html)
+- In what condition makes I/O congestion?  [Link](https://kknews.cc/zh-tw/code/y569jna.html)
 
--  gevent與GIL的關係? ➡️ [連結](https://www.programminghunter.com/article/46161044346/)
+-  What is the relationship between gevent and GIL?  [Link](https://www.programminghunter.com/article/46161044346/)
 
-- 使用的優缺點 ➡️ [連結](https://www.itread01.com/article/1537412053.html)
+- Pros and Cons  [Link](https://www.itread01.com/article/1537412053.html)
 
 - Python中gevent.sleep()和time.sleep()之間的區別➡️ [連結](https://www.796t.com/post/ajF3MXc=.html)
 
 - gevent協程切換➡️ [連結](https://www.it145.com/9/24951.html)
 
-- 對文件讀寫的gevent實作
+- 對文件讀寫的gevent實作 [Link1](https://sdiehl.github.io/gevent-tutorial/)
 
+## Implementation
 
-
-This is an IBupower Scraper Application implemented with python.
+This is an Simple Python Application demonstrates how to use send and receive the POST request.
 
 ### Usage
 
@@ -161,10 +115,6 @@ $ pipenv shell
 Launching subshell in virtual environment...
  . /Users/chenhanting/.local/share/virtualenvs/pyjie-internet-k9c1cwxU/bin/activate
 ````
-
-Result
-
-![](https://tva1.sinaimg.cn/large/e6c9d24egy1h49567tkwoj21d8078gnd.jpg)
 
 ### Production
 
